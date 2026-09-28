@@ -39,6 +39,60 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+
+以下由 `/setup` Path A 从简历要点生成，仅含骨架，**S/T/A/R 需本人补全**后才能用于面试。
+
+### 1. 大模型测试体系从 0 到 1（商汤）
+**Source:** CV - 上海商汤智能科技有限公司 / 测试经理
+**What happened:** 在尚无成熟方法的情况下，牵头搭建 LLM/VLM 到 Agent、APP 应用侧的全链路大模型测试体系，构建百万级测试数据集。
+**Why it matters:** 适合回答"如何从零建立评测体系""如何保证大模型产品质量""如何提升评测效率、降低人力成本"。
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 2. 30 余款车型车舱感知量产交付（商汤）
+**Source:** CV - 上海商汤智能科技有限公司 / 测试经理
+**What happened:** 交付国内外十余家 OEM 与 Tier One、30 多款车型的 Face ID / DMS / OMS / 健康 / 哨兵量产项目，协同算法团队归因漏检误检，通过国标、DDAW、ADDW 等法规并获 C-NCAP / E-NCAP 高分。
+**Why it matters:** 适合回答"如何管理多客户并行交付""如何与算法团队协同定位问题""如何滿足法规与量产要求"。
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 3. 企业级自动化框架：自动化率 60%→90%、部署 2 小时→30 分钟（华为）
+**Source:** CV - 华为苏州研究所 / 测试开发
+**What happened:** 主导搭建企业级自动化测试框架，编写 1000+ 脚本，实现故障注入、版本升级、性能压测等高难度专项全流程自动化；自研工具与自动部署工具大幅压缩环境准备耗时。
+**Why it matters:** 适合回答"如何推动团队自动化转型""如何消除人工执行盲区""你写过的工具带来多少收益"。
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 4. 灵犀座舱 HMI 显示专项与远程云真机平台（一汽软件）
+**Source:** CV - 一汽软件 / 测试开发
+**What happened:** 牵头智舱整体测试体系，主导屏幕黑白屏/花屏/闪屏专项方案，构建 HMI 关键场景自动化评测与端到端能力；落地标准化台架与远程云真机平台，提升跨地域回归覆盖。
+**Why it matters:** 适合回答"如何设计某类专项测试方案""如何提升跨地域团队效率""如何从缺陷识别做到根因定位"。
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 5. 车载标准与认证落地（商汤）
+**Source:** CV - 上海商汤智能科技有限公司 / 测试经理
+**What happened:** 解读车载质量标准，推动产品通过信息安全、A-SPICE L2/L3、MLE 认证，并参与车用 AI、自动驾驶接管监测、座舱功能评价等技术规范编制。
+**Why it matters:** 适合回答"如何把标准要求落到项目里""你在行业影响力方面做过什么"。
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

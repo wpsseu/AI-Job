@@ -1,8 +1,8 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - 王鹏生
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
+%% CV language: 中文（/setup 确认）。章节标题与样板行均为中文。
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -22,6 +22,13 @@
 \colorlet{namecolor}{color1}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
+% 中文支持：moderncv 默认只有拉丁字体，缺 CJK 设置时中文会缺字或显示为方框。
+% 字体名需与系统已装字体一致（Windows: Microsoft YaHei / SimSun / SimHei；
+% 跨平台: Noto Sans CJK SC）。编译仍用 lualatex。
+\usepackage{ctex}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{Microsoft YaHei}
+
 \usepackage[utf8]{inputenc}
 % moderncv loads hyperref itself in an \AtEndPreamble hook, so \hypersetup
 % must go in an \AtEndPreamble of our own: on moderncv < 2.4 a top-level
@@ -33,7 +40,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={王鹏生 - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -41,15 +48,16 @@
 }}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+\usepackage{needspace}
 
 % personal data
-\name{[First]}{[Last]}
+\name{王}{鹏生}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\address{北京}{}{}
+\phone[mobile]{18721695636}
+\email{wpsseu@163.com}
+% 未提供 LinkedIn / GitHub，故不输出 \extrainfo 行（占位 URL 会进编译产物）。
 
 \begin{document}
 
@@ -60,25 +68,25 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{具备人工智能与汽车复合能力的测试与质量负责人，13 年+汽车行业经验、6 年测试开发管理经验，曾任职头部 AI 企业与头部车企。深耕智能座舱传统 AI 功能与大模型评测方向，主导交付国内外 10 余家车企的 30 余个智舱量产及 POC 项目，参与车载 AI 行业标准制定。熟悉智能座舱从软件供应到整车落地的全链路测试流程，可独立从 0 到 1 搭建自动化测试框架以及传统模型、大模型评测体系。获 2024 年商汤集团年度杰出个人奖。}
 
 % ============================================================
 %     CORE COMPETENCIES
 % ============================================================
 
-\section{Core Competencies}
+\section{核心能力}
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{AI 与大模型评测}: 精通多类 AI 评测方法，熟练运用 PyTorch 开展模型性能优化与压力测试；可搭建 VFM、VLM、LLM、Agent、多模态模型测试数据集，实现 Prompt 批量测试、自动评分、Badcase 分析及回归验证；围绕准确率、召回率、幻觉率、时延、鲁棒性构建评测指标体系，支撑 SFT 微调版本对比。
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{智能座舱全链路测试}: 覆盖需求评审、用例设计、集成、功能、性能精度、稳定性、可靠性、安全测试以及台架与实车测试；可完成模型、SDK、应用、硬件及 HMI 显示各维度测试，保障量产交付。
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{测试开发与自动化}: 熟练使用 Python、C++、Java、TypeScript、Shell，可独立设计开发自动化测试框架、AI 测试平台与数据分析工具；掌握 Selenium、Postman、JMeter，具备接口自动化与 CI/CD 落地经验。
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{测试管理与量产交付}: 承担量产项目测试管理与策略制定，服务国内外十余家 OEM 及 Tier One 客户（含德国、日本及国内主流车企），落地近 30 款车型量产交付。
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{标准与法规}: 深度解读车载质量标准，推动产品通过信息安全、A-SPICE L2/L3、MLE 认证；参与车用 AI 专项、自动驾驶接管能力监测、汽车座舱功能评价技术规范编制。
 
 \end{itemize}
 
@@ -86,36 +94,45 @@
 %     PROFESSIONAL EXPERIENCE
 % ============================================================
 
-\section{Professional Experience}
+\section{工作经历}
 \vspace{3pt}
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2026.07-至今}{测试开发}{一汽软件}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
+    \item {牵头智能座舱整体测试体系建设，全权负责屏幕黑白屏、花屏、闪屏等 HMI 显示类专项测试方案设计与落地}
+    \item {搭建包含用例设计、缺陷识别、根因定位的端到端测试能力，协同研发定位显示异常并推动缺陷闭环验证}
+    \item {负责自动化测试框架搭建：用例批量执行、测试结果自动采集、异常自动识别}
+    \item {输出标准化测试台架方案并落地远程云真机平台，扩大自动化回归覆盖，提升跨地域测试执行效率}
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2022.12-2026.06}{测试经理}{上海商汤智能科技有限公司}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
+    \item {团队管理与量产交付：覆盖 DMS、OMS、Face ID、哨兵模式等功能，服务国内外十余家 OEM 及 Tier One 客户，落地近 30 款车型量产项目}
+    \item {大模型产品预研与测试体系搭建：牵头 LLM、VLM 模型侧至 Agent、APP 应用侧的全链路多维度测试策略规划，带领团队构建百万级测试数据集}
+    \item {支撑 POI 推荐、车载说明书、AI 壁纸生成、健康助手、遗留物监测与儿童关怀 Agent 等大模型产品落地，累计反馈 400+ 条 Badcase，获客户感谢信}
+    \item {推动产品通过信息安全、A-SPICE L2/L3、MLE 认证；多次代表公司出席汽车行业标准会议并参与 3 项技术规范编制}
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{2020.12-2022.11}{测试开发}{华为苏州研究所}{}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
+    \item {主导搭建企业级自动化测试框架，基于 Python、Shell 编写 1000+ 测试脚本，推动团队自动化率从 60\% 提升至 90\%}
+    \item {实现故障注入、版本升级、性能压测等高难度专项测试全流程自动化，建立自动化用例库与持续回归机制}
+    \item {独立研发自动化测试工具与环境自动部署工具，测试环境部署耗时从 2 小时压缩至 30 分钟}
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{2013.07-2020.11}{机械结构工程师}{上海翼锐汽车科技有限公司}{}{}{\vspace{1pt}
+\begin{itemize}
+    \item {负责底盘零件结构设计：主导开发多款车型车轮、随车工具、紧固件等零件，7 年整车研发经验奠定汽车行业流程与质量体系基础}
 \end{itemize}}}
 
 \end{itemize}
@@ -124,18 +141,18 @@
 %     EDUCATION
 % ============================================================
 
-\section{Education}
+\section{教育背景}
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{2018-2021}{硕士（非全日制），计算机科学与技术}{上海交通大学}{}{}{\vspace{1pt}
+与华为苏州研究所任职期重叠，属非全日制在读。
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
+\item{\cventry{2009-2013}{本科，机械制造与自动化}{东南大学}{}{}{\vspace{1pt}
+机械制造与自动化。
 }}
 
 \end{itemize}
@@ -144,40 +161,32 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 %     LANGUAGES
 % ============================================================
 
-\section{Languages}
+\section{语言}
 \vspace{1pt}
 \begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
+\item {中文（母语），英语（CET-6，可进行技术会议交流）。}
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
-\section{Publications}
+\section{荣誉奖项}
 \vspace{1pt}
 \begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{2024 年商汤集团年度杰出个人奖} -- 商汤集团 (2024)。}
+\item{\textbf{客户感谢信} -- 大模型项目交付获客户高度赞扬。}
+\item{\textbf{参与编制 3 项车载 AI / 座舱技术规范} -- 车用 AI 专项、自动驾驶接管能力监测、汽车座舱功能评价。}
 \end{itemize}
 
 % ============================================================
 %     REFERENCES
 % ============================================================
 
-\section{References}
+\section{推荐人}
 \vspace{1pt}
 \begin{itemize}
-\item{Available upon request.}
+\item{如有需要可提供推荐人信息。}
 \end{itemize}
 
 \end{document}

@@ -76,8 +76,13 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{[YOUR_NAME]}}{  \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} | [YOUR_PHONE] |  \urlstyle{same}\href{[YOUR_LINKEDIN_URL]}{LinkedIn}
+\namesection{}{\Huge{王鹏生}}{  \href{mailto:wpsseu@163.com}{wpsseu@163.com} | 18721695636
 }
+% 未提供 LinkedIn：不要保留 \href{[LINKEDIN]}{LinkedIn} 占位，否则会进编译产物。
+% 补充 URL 后恢复为：... | 18721695636 | \urlstyle{same}\href{<LinkedIn URL>}{LinkedIn}
+%
+% 中文求职信（招聘启事为中文时）：cover.cls 用 fontspec，中文同样需要 CJK 字体设置，
+% 在导言区加 \setCJKmainfont{Microsoft YaHei} / \setCJKsansfont{Microsoft YaHei}（见 05-cv-templates.md）。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     MAIN COVER LETTER CONTENT
@@ -108,7 +113,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 % doubled break triggers "! LaTeX Error: There's no line here to end."
 \closing{Kind regards,}
 
-\signature{[YOUR_NAME]}
+\signature{王鹏生}
 \end{flushright}
 \end{document}
 ```

@@ -4,70 +4,94 @@ framework_version: 1.1.1
 
 # Candidate Profile
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all sections will be filled with your actual information -->
+<!-- Populated by /setup Path A from documents/cv/个人简历.pdf -->
+<!-- 推断项已标注来源；再跑 /setup 可增量合并新文档，不会覆盖已有内容 -->
 
 ## Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_ADDRESS]
-- **Phone:** [YOUR_PHONE]
-- **Email:** [YOUR_EMAIL]
-- **LinkedIn:** [YOUR_LINKEDIN_URL]
-- **GitHub:** [YOUR_GITHUB_URL]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **Constraints:** [YOUR_COMMUTE_OR_LOCATION_CONSTRAINTS]
+- **Name:** 王鹏生
+- **Gender:** 男
+- **Location:** 北京（现居）
+- **Phone:** 18721695636
+- **Email:** wpsseu@163.com
+- **LinkedIn:** 未提供
+- **GitHub:** 未提供
+- **Status:** 在职（一汽软件，2026.07 起）
+- **Constraints:** 可接受工作城市：北京、上海、苏州。接受长期出差与客户驻场。接受海外岗位（含 relocation，本人已确认）。
 
 ### Languages
-<!-- Every language you can work in professionally, with your honest level. Used by the
-Language Gate in 04-job-evaluation.md and by job-scraper/search-queries.md's query-language
-generation. Omit any language you don't actually work in - an undeclared language is treated as
-a hard no, not a gap to smooth over. -->
 
 | Language | Level | Notes |
 |----------|-------|-------|
-| [LANGUAGE] | [LEVEL, e.g. "Native" / "C2" / "B1/B2 (conversational)"] | [optional] |
+| 中文 | 母语 | |
+| 英语 | CET-6，可进行技术会议交流 | 未声明 CEFR 等级。JD 若写 "fluent English" 等高于此表述的要求，按 `04-job-evaluation.md` Language Gate 判为 FLAG 并提示本人判断，不做静默 PASS |
+| 日语 | 未声明 | 简历提及服务日本车企客户，但未声明日语能力 → 若 JD 要求日语，属"完全未声明"，Language Gate 硬否决 |
+| 德语 | 未声明 | 同上（德国客户） |
+
+## Profile Summary
+复合"人工智能 + 汽车"背景：13 年+汽车行业经验、6 年测试开发管理经验，曾任职头部 AI 企业与头部车企。深耕智能座舱传统 AI 功能与大模型评测方向，主导交付国内外 10 余家车企的 30 余个智舱量产及 POC 项目，参与车载 AI 行业标准制定。熟悉智能座舱从软件供应到整车落地的全链路测试流程，可独立从 0 到 1 搭建自动化测试框架以及传统模型、大模型评测体系。获 2024 年商汤集团年度杰出个人奖。
 
 ## Education
 
 | Degree | Period | Institution | Key Topics |
 |--------|--------|-------------|------------|
-| [DEGREE] | [YEARS] | [INSTITUTION] | [TOPICS] |
+| 硕士（非全日制），计算机科学与技术 | 2018-2021 | 上海交通大学 | 与华为苏州研究所任职期重叠（非全日制，正常） |
+| 本科，机械制造与自动化 | 2009-2013 | 东南大学 | 机械制造与自动化 |
 
 ## Professional Experience
 
-### [JOB_TITLE] - [COMPANY] ([START] - [END])
-[LOCATION]
-- [RESPONSIBILITY_OR_ACHIEVEMENT_1]
-- [RESPONSIBILITY_OR_ACHIEVEMENT_2]
-- [RESPONSIBILITY_OR_ACHIEVEMENT_3]
+### 测试开发 - 一汽软件 (2026.07 - 至今)
+- 牵头智能座舱整体测试体系建设；全权负责屏幕黑白屏、花屏、闪屏等显示类专项测试方案设计与落地，覆盖 HMI 核心显示场景
+- 搭建端到端测试能力：用例设计、缺陷识别、根因定位；协同研发定位显示异常并完成根因分析，推动缺陷闭环验证
+- 负责自动化测试框架搭建：用例批量执行、测试结果自动采集、异常自动识别
+- 输出标准化测试台架方案并落地远程云真机平台，扩大自动化回归覆盖，提升跨地域测试执行效率
 
-<!-- Add more roles as needed -->
+### 测试经理 - 上海商汤智能科技有限公司 (2022.12 - 2026.06)
+- 团队管理与量产交付：智能座舱量产项目测试管理与测试策略制定，覆盖 DMS、OMS、Face ID、哨兵模式等功能；服务国内外十余家 OEM 及 Tier One（含德国、日本及国内主流车企），落地近 30 款车型量产交付
+- 大模型产品预研与测试体系搭建：牵头 LLM、VLM 模型侧至 Agent、APP 应用侧的全链路多维度大模型测试策略规划；带领团队构建百万级测试数据集，依托自动化评测方案提升海量数据评测效率、降低人力成本
+- 质量标准与认证：深度解读车载质量标准，推动产品通过信息安全、A-SPICE L2/L3、MLE 认证；将标准要求沉淀并落地至量产项目
+- 标准编制：多次代表公司出席汽车行业标准会议，参与车用 AI 专项、自动驾驶接管能力监测、汽车座舱功能评价技术规范等标准编制
+
+### 测试开发 - 华为苏州研究所 (2020.12 - 2022.11)
+- 主导搭建企业级自动化测试框架，基于 Python/Shell 编写 1000+ 测试脚本，覆盖功能、性能、接口等核心场景；推动团队自动化率从 60% 提升至 90%，压缩回归测试周期
+- 实现故障注入、版本升级、性能压测等高难度专项测试的全流程自动化，消除人工执行盲区与一致性风险；建立自动化用例库与持续回归机制
+- 独立研发自动化测试工具（任务调度、结果分析、报告生成），实现测试流程无人值守；开发环境自动部署工具，部署耗时从 2 小时压缩至 30 分钟
+
+### 机械结构工程师 - 上海翼锐汽车科技有限公司 (2013.07 - 2020.11)
+- 负责底盘零件结构设计：主导开发多款车型车轮、随车工具、紧固件等零件，7 年整车研发经验奠定汽车行业流程与质量体系基础
 
 ## Independent Projects
-<!-- Projects outside of employment: freelance, open source, personal -->
-- **[PROJECT_NAME]**: [DESCRIPTION]
+- **车舱感知深度学习产品量产交付**：交付国内新势力与传统主流车企 30 多款量产项目（Face ID、DMS、OMS、健康、哨兵等）；通过功能、性能精度、可靠性稳定性、实车测试，协同算法团队完成漏检/误检归因，推动模型与软件能力提升，满足量产要求并顺利通过国标、DDAW、ADDW 等法规，获 C-NCAP 与 E-NCAP 高分
+- **座舱各类大模型落地项目**：构建完整大模型测试方法，实现 Prompt 批量测试、自动打分、Badcase 分析与回归验证，支撑 SFT 微调版本对比与优势模型对标；推动解决幻觉、时延、精度问题；完成 POI 推荐、车载说明书、AI 壁纸生成、健康助手 APP、遗留物监测 Agent、儿童关怀 Agent 等功能测试策略与自动化落地；支撑宝马、大众、广汽等主机厂 POC 与量产，累计反馈 400+ 条 Badcase，获客户感谢信
+- **灵犀座舱系统自动化测试体系**：牵头体系建设，主导屏幕黑白花闪等 HMI 显示类专项测试方案设计；构建 HMI 关键场景自动化评测体系（用例设计→缺陷识别→根因分析）；设计标准化台架方案与远程云真机测试平台，研发测试框架与自动化工具链
 
 ## Technical Skills
 
 ### Programming & ML
-- **[LANGUAGE]** ([PROFICIENCY]): [FRAMEWORKS_AND_LIBRARIES]
-- [OTHER_SKILLS]
+- **Python**（熟练）：自动化测试框架、数据分析工具、测试脚本（华为期间 1000+ 脚本）
+- **C++ / Java / TypeScript**（熟练）：测试开发与工具链
+- **Shell**：自动化脚本与环境部署工具
+- **PyTorch**（熟练）：模型性能优化与压力测试
+- **评测对象**：VFM、VLM、LLM、Agent、多模态模型；Prompt 批量测试、自动评分、Badcase 分析、回归验证；指标体系覆盖准确率、召回率、幻觉率、时延、鲁棒性；支撑 SFT 微调版本对比
 
 ### Domain Expertise
-- [DOMAIN_1]
-- [DOMAIN_2]
+- 智能座舱全链路测试：需求评审、用例设计、集成/功能/性能精度/稳定性/可靠性/安全测试，台架与实车测试；模型、SDK、应用、硬件、HMI 显示各维度
+- 车载 AI 功能测试：DMS、OMS、Face ID、哨兵模式、健康监测
+- 车载质量标准与法规：A-SPICE L2/L3、信息安全、MLE；国标、DDAW、ADDW、C-NCAP、E-NCAP
+- 测试平台与基础设施：标准化测试台架、远程云真机测试平台、CI/CD 落地
 
 ### Software & Tools
-- [TOOL_LIST]
+- Selenium、Postman、JMeter；接口自动化
+- Git、Jira
+- Windows、Linux
+- AI 工具优化测试流程（借助 AI 工具提升测试效率）
 
 ## Publications
-<!-- List peer-reviewed publications, if any -->
-1. [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL]. [DOI_LINK]
+（暂无。如有论文或会议报告请补充）
 
 ## Awards
-- [AWARD] - [EVENT] ([YEAR])
+- 2024 年商汤集团年度杰出个人奖
+- 客户感谢信（大模型项目交付获客户高度赞扬）
+- 参与编制：车用 AI 专项标准、自动驾驶接管能力监测标准、汽车座舱功能评价技术规范（代表公司出席汽车行业标准会议）
 
 ## References
-- [NAME], [TITLE], [COMPANY] ([EMAIL], [PHONE])
-
-More references available upon request.
+- 未提供（如需，可补充姓名、职位、公司、邮箱、电话）

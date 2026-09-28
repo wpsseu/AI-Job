@@ -1,0 +1,15 @@
+{
+  "name": "v2ex-cli",
+  "version": "1.0.0",
+  "description": "CLI for searching job-related topics on V2EX's public API (nodes: jobs, career, outsourcing) - zero runtime dependencies. Personal use only.",
+  "type": "module",
+  "main": "src/cli.ts",
+  "bin": { "v2ex-search": "src/cli.ts" },
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": { "typescript": "^5.4.0", "@types/bun": "1.3.14" }
+}

@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** 智能座舱全链路测试（需求评审→用例设计→集成/功能/性能精度/稳定性/可靠性/安全→台架与实车）；AI 与大模型评测（VFM、VLM、LLM、Agent、多模态；准确率、召回率、幻觉率、时延、鲁棒性；数据集构建、Prompt 批量测试、自动评分、Badcase 分析与回归、SFT 版本对比）；自动化测试框架与工具链自研（Python/C++/Java/TypeScript/Shell、PyTorch、Selenium/Postman/JMeter、CI/CD）；测试团队管理与量产交付（十余家 OEM / Tier One、近 30 款车型）
+**Moderate match areas:** 车载质量标准与认证（A-SPICE L2/L3、信息安全、MLE）及标准编制参与；测试平台/基础设施方向（标准化台架、远程云真机）；算法团队协同归因（评测视角，非模型训练）；整车研发与机械结构背景（早期经历）
+**Weak match areas:** 模型训练与算法结构创新（做评测，不做研发）；论文与学术产出；前端 / 移动端原生开发；非汽车领域的通用 AI 产品或互联网业务线
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +74,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** 智能座舱车载 AI 功能（DMS、OMS、Face ID、哨兵、健康）量产测试与交付；大模型评测体系从 0 到 1；企业级自动化测试框架建设与推广；测试团队管理（测试经理）
+**Moderate:** 测试开发架构师 / 测试平台负责人（有实际落地，正式头衔较弱）；质量标准与合规体系（A-SPICE、功能安全、信息安全）；自动驾驶接管监测等相邻评测方向
+**Entry-level:** 算法研发 / 模型训练岗；科研与论文导向岗位；非汽车行业的质量或测试管理岗
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +107,20 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- AI 评测负责人（目标方向一）：带团队建立大模型 / Agent 评测体系与标准
+- 智能座舱测试经理（目标方向二）：负责座舱 AI 功能与整车落地的测试管理与量产交付
+- 测试开发架构师 / 车载 AI 测试负责人（目标方向三）：测试平台、自动化框架与工具链的架构与技术负责
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: 前沿技术方向的工作（大模型、Agent 评测等新方法）
+- Compensation: 薪资水平是明确的激励因素（见下方 Security）
+- Tasks that drain: 本人尚未明确列出 — 若发现 JD 描述高度重复既有流程、无方法论定义空间、或技术栈陈旧，应主动提示本人判断，不要替其决定
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: 薪资底线 月薪 25K，低于此直接跳过（deal-breaker）；目标基线 31K × 15（年薪约 46.5 万，默认税前月薪口径）。薪资显著低于基线的岗位在 Career Alignment 上应扣分并在报告中点明。
+- **Flexibility**: 接受长期出差与客户驻场；接受海外岗位（含 relocation）。可接受工作城市：北京、上海、苏州。
+- **Professional development**: 倾向前沿技术方向，能持续接触大模型 / Agent 等新评测方法与工具。
 
 ### 6. Salary Benchmark (Optional)
 

@@ -52,7 +52,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={王鹏生 - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -62,13 +62,15 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{王}{鹏生}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{北京}{}{}
+\phone[mobile]{18721695636}
+\email{wpsseu@163.com}
+% 未提供 LinkedIn / GitHub：若两者都没有，删除整行 \extrainfo（占位 URL 会进编译产物）。
+% 后续补充 URL 后恢复为：
+% \extrainfo{\href{<LinkedIn URL>}{LinkedIn}, \href{<GitHub URL>}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -118,6 +120,24 @@ Two related patterns are fine and should be kept:
 
 Section headings such as `\section{Core Competencies}`, `Professional Experience`, `Education`, `Languages`, `Publications`, `Honors and Awards`, `References` (and any others your template defines), plus the `Available upon request.` line under References, are all **literal English text baked into the template** - they do not translate themselves. Whenever the CV language (see `CV language` in the candidate profile) is not English, translate every one of these too, whatever they are, not just the body prose - a CV with a fully localized profile statement and bullets sitting under untouched English section headers reads as sloppy and inconsistent, and it's an easy thing to forget precisely because the prose translation is the obvious, visible part of the job. Worked example for Spanish: `Competencias Clave`, `Experiencia Profesional`, `Educaci\'on`, `Idiomas`, `Publicaciones`, `Distinciones y Premios`, `Referencias`, `Disponibles a solicitud.` The same rule applies for any other target language - check this explicitly during the verification pass.
 
+### 中文 CV 编译（CV language: 中文 时必须配置）
+
+默认 moderncv 只设置了拉丁字体，中文会以缺字 / 方框形式出现（lualatex 报 `Font ... does not contain ... CJK`，或静默丢字）。在导言区加入 **ctex**（`\setCJKmainfont` 由 ctex / xeCJK 提供，**单独 `\usepackage{fontspec}` 下该命令未定义**，会报 `Missing \begin{document}`）：
+
+```latex
+\usepackage{ctex}                   % 提供 \setCJKmainfont / \setCJKsansfont
+\setCJKmainfont{SimSun}             % 正文（或 Microsoft YaHei）
+\setCJKsansfont{Microsoft YaHei}    % 文档用 sans 选项，标题与正文多走 sans
+```
+
+要点：
+- 已在本机验证：`lualatex` + 上述三行 → `Output written on main_example.pdf (2 pages)`，中文在 PDF 文本层可正常抽取。
+- 字体名必须与系统已安装字体一致。Windows 常用：`Microsoft YaHei`、`SimSun`、`SimHei`、`KaiTi`；跨平台可用 `Noto Sans CJK SC` / `Noto Serif CJK SC。
+- 编译仍用 **lualatex**（不要用 pdflatex）。若报 `font not found`，换上表中存在的字体名即可，不要改用 pdflatex 绕开。
+- 避免在正文里使用 ASCII 双引号包裹中文（会被渲染成两个右引号）；需要引号时直接写中文全角引号 `“ ”`。
+- 中文字体不影响 ASCII 日期规则：`\cventry` 的日期参数仍要写**单个 ASCII 连字符**（`2016-2024`），见下文 ATS 一节。
+- 编译后必须目视 + 抽文本层确认中文在 PDF 文本层里不是乱码（ATS 会读到同一份文本层）。
+
 ## Section-by-Section Tailoring
 
 ### Profile Statement / Elevator Pitch (Best Practice)
@@ -130,8 +150,17 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**CV language: 中文**（`/setup` 已确认）。因此所有 `\section{}` 标题与 References 样板行必须用中文：
+`核心能力` / `工作经历` / `教育背景` / `语言` / `出版物` / `荣誉奖项` / `推荐人`；样板行用"如有需要可提供推荐人信息。"。详见下文"Section headings must match the CV's language"。
+
+**For AI 评测负责人 / 大模型评测 roles:**
+> 具备"人工智能 + 汽车"复合背景的测试与质量负责人，13 年+汽车行业经验、6 年测试开发管理经验，曾任职头部 AI 企业与头部车企。主导搭建 LLM、VLM 到 Agent、APP 应用侧的全链路大模型评测体系，构建百万级测试数据集，覆盖准确率、召回率、幻觉率、时延与鲁棒性等多维指标，支撑 SFT 微调版本对比与优势模型对标，累计反馈 400+ 条 Badcase 并推动产品交付。可独立从 0 到 1 搭建自动化测试框架与评测平台，以自动化替代人力实现降本增效。
+
+**For 智能座舱测试经理 / 车载 AI 测试负责人 roles:**
+> 深耕智能座舱测试 6 年、测试开发管理 6 年，主导交付国内外 10 余家车企的 30 余个智舱量产及 POC 项目，覆盖 DMS、OMS、Face ID、哨兵等功能。熟悉从软件供应到整车落地的全链路测试流程（需求评审、用例设计、集成、功能、性能精度、稳定性、可靠性、安全、台架与实车），推动产品通过 A-SPICE L2/L3、信息安全与 MLE 认证，并参与车用 AI 专项、自动驾驶接管能力监测、汽车座舱功能评价等技术规范编制。获 2024 年商汤集团年度杰出个人奖。
+
+**For 测试开发架构师 / 测试平台负责人 roles:**
+> 测试开发出身的质量技术负责人，熟练使用 Python / C++ / Java / TypeScript，曾主导搭建企业级自动化测试框架（1000+ 脚本，团队自动化率由 60% 提升至 90%），实现故障注入、版本升级、性能压测等高难度专项全流程自动化，并将环境部署耗时从 2 小时压缩至 30 分钟。近年主导标准化测试台架与远程云真机平台落地，支撑跨地域回归覆盖与团队效能提升。
 
 **For [YOUR_SECONDARY_ROLE_TYPE] roles:**
 > [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
